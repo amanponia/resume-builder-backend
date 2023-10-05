@@ -16,3 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('fallback', function () {
+    return response()->json('Contact Aman to access this resource.', 404);
+})->name('fallback');
